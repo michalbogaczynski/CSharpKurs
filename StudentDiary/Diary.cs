@@ -8,8 +8,12 @@ namespace StudentDiary
 {
     class Diary
     {
+        public Diary()
+        {
+            ratings = new List<float>();
+        }
         //Stan
-        List<float> ratings = new List<float>();
+        List<float> ratings;
                 
         //Zachowania
         public void AddRating(float rating)
@@ -36,7 +40,7 @@ namespace StudentDiary
         }
 
         public float GiveMinRating()
-        {
+        { 
             return ratings.Min();
         }
 
