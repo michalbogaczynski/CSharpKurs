@@ -22,6 +22,27 @@ namespace Typy
 
         static void Main(string[] args)
         {
+            //PassByValueAndRef();
+
+            Immutable();
+
+            Console.ReadKey();
+        }
+
+        private static void Immutable()
+        {
+            string name = " Marcin ";
+            name = name.Trim(); //usuwanie białych znaków, nalezy przypisać do zmiennej aby utworzyć nowy ciąg
+
+            DateTime date = new DateTime(2015, 3, 10);
+            date = date.AddHours(48);
+                        
+            Console.WriteLine(name);
+            Console.WriteLine(date);
+        }
+
+        private static void PassByValueAndRef()
+        {
             Diary d1 = new Diary();
             Diary d2 = d1;
 
@@ -31,17 +52,8 @@ namespace Typy
 
             int x1 = 4;
             IncrementNumber(x1);
-                
+
             Console.WriteLine(x1);
-            
-
-            string name1 = "Marcin";
-            string name2 = "marcin";
-
-
-            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
-            Console.WriteLine(areEqual);
-            Console.ReadKey();
         }
     }
 }
