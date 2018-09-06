@@ -33,8 +33,15 @@ namespace Typy
             IncrementNumber(x1);
                 
             Console.WriteLine(x1);
-            Console.ReadKey();
+            
 
+            string name1 = "Marcin";
+            string name2 = "marcin";
+
+
+            bool areEqual = name1.Equals(name2, StringComparison.CurrentCultureIgnoreCase);
+            Console.WriteLine(areEqual);
+            Console.ReadKey();
         }
     }
 }
