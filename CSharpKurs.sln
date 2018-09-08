@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocinek 13", "Ocinek 13\Ocin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy", "Typy\Typy.csproj", "{13423CF4-80D5-432F-9C63-3185E82BB869}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Typy.Tests", "Typy.Tests\Typy.Tests.csproj", "{A09ABE6B-DCD3-4884-B592-2E19CCC22F56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{13423CF4-80D5-432F-9C63-3185E82BB869}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13423CF4-80D5-432F-9C63-3185E82BB869}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13423CF4-80D5-432F-9C63-3185E82BB869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A09ABE6B-DCD3-4884-B592-2E19CCC22F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A09ABE6B-DCD3-4884-B592-2E19CCC22F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A09ABE6B-DCD3-4884-B592-2E19CCC22F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A09ABE6B-DCD3-4884-B592-2E19CCC22F56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
