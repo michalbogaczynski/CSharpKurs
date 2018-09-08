@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Typy.Tests
+namespace Members.Tests
 {
     [TestClass]
     public class DiaryTests
