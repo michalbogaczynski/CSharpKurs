@@ -20,8 +20,24 @@ namespace Members
         //public static float MaxGrade = 10;
         //public static long Count = 0;
 
-        public string Name;
-                
+        private string _name;
+
+        public string Name
+        {
+            get
+            {
+                return _name.ToUpper();
+            }
+            set
+            {
+                if (!string.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+            }
+        }
+
+
         //Zachowania
         public void AddRating(float rating)
         {

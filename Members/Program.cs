@@ -16,10 +16,16 @@ namespace Members
             diary.AddRating(8.4f);
 
             DiaryStatistics stats = diary.ComputeStatistics();
-            WriteResult("Average", stats.AverageGrade, 3, 5, 6, 7, 8 );
-            WriteResult("Max", (int)stats.MaxGrade);
-            WriteResult("Min", (long)stats.MinGrade);
-            WriteResult("Min", stats.MinGrade, 1);
+            //WriteResult("Average", stats.AverageGrade, 3, 5, 6, 7, 8 );
+            //WriteResult("Max", (int)stats.MaxGrade);
+            //WriteResult("Min", (long)stats.MinGrade);
+            //WriteResult("Min", stats.MinGrade, 1);
+
+            diary.Name = "Dzienniczek Michała";
+            diary.Name = "";
+            //diary.Name = null;
+            Console.WriteLine(diary.Name);
+
             Console.ReadKey(); 
         }
 
