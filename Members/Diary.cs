@@ -32,11 +32,17 @@ namespace Members
             {
                 if (!string.IsNullOrEmpty(value))
                 {
+                    if (_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
+
                     _name = value;
                 }
             }
         }
-
+        // Delegat
+        public NameChangedDelegate NameChanged;
 
         //Zachowania
         public void AddRating(float rating)
