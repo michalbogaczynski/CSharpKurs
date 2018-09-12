@@ -21,11 +21,15 @@ namespace Members
             //WriteResult("Min", (long)stats.MinGrade);
             //WriteResult("Min", stats.MinGrade, 1);
 
-            diary.NameChanged += new NameChangedDelegate(OnNameChanged);        
-            diary.NameChanged += new NameChangedDelegate(OnNameChanged2);
-            diary.NameChanged += new NameChangedDelegate(OnNameChanged3);
-            diary.NameChanged += new NameChangedDelegate(OnNameChanged4);
-            diary.NameChanged += new NameChangedDelegate(OnNameChanged4);
+            diary.NameChanged += OnNameChanged;
+            diary.NameChanged += OnNameChanged2;
+            diary.NameChanged += OnNameChanged3;
+            diary.NameChanged += OnNameChanged4;
+            diary.NameChanged += OnNameChanged4;
+            diary.NameChanged += OnNameChanged4;
+            diary.NameChanged -= OnNameChanged4;
+
+
             diary.Name = "Dzienniczek Michała";
             diary.Name = "Jacek Hej";
 
@@ -38,21 +42,21 @@ namespace Members
             Console.ReadKey(); 
         }
 
-        private static void OnNameChanged(string existingName, string newName)
+        private static void OnNameChanged(object sender, NameChangedEventArgs args)
         {
-            Console.WriteLine($"Zmiana nazwy z {existingName} na {newName}");
+            Console.WriteLine($"Zmiana nazwy z {args.ExistingName} na {args.NewName}");
         }
 
-        private static void OnNameChanged2(string existingName, string newName)
+        private static void OnNameChanged2(object sender, NameChangedEventArgs args)
         {
             Console.WriteLine("**************");
         }
 
-        private static void OnNameChanged3(string existingName, string newName)
+        private static void OnNameChanged3(object sender, NameChangedEventArgs args)
         {
             Console.WriteLine("Hello");
         }
-        private static void OnNameChanged4(string existingName, string newName)
+        private static void OnNameChanged4(object sender, NameChangedEventArgs args)
         {
             Console.WriteLine("+++++++++++++");
         }
