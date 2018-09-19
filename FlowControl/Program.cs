@@ -14,6 +14,52 @@ namespace FlowControl
         static void Main(string[] args)
         {
             //instructionIf();
+            //instructionSwitch();
+
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    for (int a = 0; a < 2; a++)
+            //    {
+            //        Console.WriteLine("wartość i : {0} oraz wartość a : {1}", i, a);
+            //    }
+
+            //}
+
+            int i = 1;
+
+            //while (i > 3)
+            //{
+            //    Console.WriteLine("wartość i {0}", i );
+            //    i++;
+            //}
+
+            //do
+            //{
+            //    Console.WriteLine("wartość i {0}", i );
+            //    i++;
+            //} while (i > 3);
+
+            //int[] tab = { 1, 2, 3, 4, 5, 7, 4, 2 };
+
+            //foreach (var item in tab)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            for (; ;)
+            {
+                Console.WriteLine("podaj imie");
+                string text = Console.ReadLine();
+                Console.WriteLine("masz na imie {0}", text);
+            }
+
+
+
+            Console.ReadKey();
+        }
+
+        private static void instructionSwitch()
+        {
             Console.WriteLine("Podaj imie: ");
             name = Console.ReadLine();
 
@@ -30,9 +76,6 @@ namespace FlowControl
                     MEthod4();
                     break;
             }
-
-
-            Console.ReadKey();
         }
 
         private static void instructionIf()
