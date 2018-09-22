@@ -16,46 +16,124 @@ namespace FlowControl
             //instructionIf();
             //instructionSwitch();
 
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    for (int a = 0; a < 2; a++)
-            //    {
-            //        Console.WriteLine("wartość i : {0} oraz wartość a : {1}", i, a);
-            //    }
+            //instructionFor();
+            //instructionWhile();
+            //instructionDoWhile();
+            //instrutionForeach();
+            //instructionForInfinity();
 
-            //}
+            //instructionContinueBreak();
+            //instructionGoTo();
 
-            int i = 1;
+            int[] ages = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            CheckAges(ages);
 
-            //while (i > 3)
-            //{
-            //    Console.WriteLine("wartość i {0}", i );
-            //    i++;
-            //}
+            Console.ReadKey();
+        }
+        #region metody prywatne
+        private static void CheckAges(int[] ages)
+        {
+            foreach (var age in ages)
+            {
+                if (age == 3)
+                {
+                    Console.WriteLine("wiek wynosi: {0}", age);
+                    return;//wychodzi z pętli oraz metody i przechodzi do następnej instrukcji 
+                }
+            }
+        }
 
-            //do
-            //{
-            //    Console.WriteLine("wartość i {0}", i );
-            //    i++;
-            //} while (i > 3);
+        private static void instructionGoTo()
+        {
+            int[] ages = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            foreach (var age in ages)
+            {
+                if (age == 2)
+                {
+                    Console.WriteLine("wiek wynosi: {0}", age);
+                    goto skip;//przeskakuje do skip, instruckaj goto zaciemnia kod raczej nie używać
+                    Console.WriteLine("hello"); //ta instrukcja się nie wykona ponieważ jest po continue
+                }
 
-            //int[] tab = { 1, 2, 3, 4, 5, 7, 4, 2 };
 
-            //foreach (var item in tab)
-            //{
-            //    Console.WriteLine(item);
-            //}
+            }
 
-            for (; ;)
+        skip:
+            Console.WriteLine("witaj");
+        }
+
+        private static void instructionContinueBreak()
+        {
+            int[] ages = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            foreach (var age in ages)
+            {
+                if (age == 2)
+                {
+                    Console.WriteLine("wiek wynosi: {0}", age);
+                    continue; //po tej instrukcji nie wykonywane są dalsze instruckję tylko program przechodzi do kolejnej iteraccji czyli do 3
+                    Console.WriteLine("hello"); //ta instrukcja się nie wykona ponieważ jest po continue
+                }
+
+                if (age == 4)
+                {
+                    Console.WriteLine("wiek wynosi: {0}", age);
+                    break; //przerywa działanie pętli
+                    Console.WriteLine("hello"); //nie wykona się
+                }
+            }
+        }
+
+        private static void instructionForInfinity()
+        {
+            for (;;)
             {
                 Console.WriteLine("podaj imie");
                 string text = Console.ReadLine();
                 Console.WriteLine("masz na imie {0}", text);
             }
+        }
 
+        private static void instrutionForeach()
+        {
+            int[] tab = { 1, 2, 3, 4, 5, 7, 4, 2 };
 
+            foreach (var item in tab)
+            {
+                Console.WriteLine(item);
+            }
+        }
 
-            Console.ReadKey();
+        private static void instructionDoWhile()
+        {
+            int i = 2;
+            do
+            {
+                Console.WriteLine("wartość i {0}", i);
+                i++;
+            } while (i > 3);
+        }
+
+        private static void instructionWhile()
+        {
+            int i = 1;
+
+            while (i > 3)
+            {
+                Console.WriteLine("wartość i {0}", i);
+                i++;
+            }
+        }
+
+        private static void instructionFor()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int a = 0; a < 2; a++)
+                {
+                    Console.WriteLine("wartość i : {0} oraz wartość a : {1}", i, a);
+                }
+
+            }
         }
 
         private static void instructionSwitch()
@@ -130,5 +208,6 @@ namespace FlowControl
         {
             Console.WriteLine("Jesteś w pierwszej metodzie");
         }
+        #endregion
     }
 }
